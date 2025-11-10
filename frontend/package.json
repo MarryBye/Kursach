@@ -1,0 +1,19 @@
+{
+  "name": "frontend-taxi-service",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Viktor Lukianov (MarryBye)",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass src/styles/:../src/static/styles/",
+    "build:ts": "tsc",
+    "build": "npm run build:sass && npm run build:ts"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.93.3",
+    "typescript": "^5.9.3"
+  }
+}
