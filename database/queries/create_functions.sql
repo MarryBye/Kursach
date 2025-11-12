@@ -1,6 +1,19 @@
+
 CREATE FUNCTION check_tel(tel_number TEXT) RETURNS BOOLEAN AS $$
 BEGIN
   RETURN (tel_number ~* '^\+\d{1,3}-\d{3}-\d{3}-\d{2}-\d{2}$');
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE FUNCTION check_email(email TEXT) RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN (email ~* '^[\w\.-]+@[\w\.-]+\.\w+$');
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE FUNCTION check_password(password TEXT) RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN (password ~* '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$');
 END;
 $$ LANGUAGE plpgsql;
 
