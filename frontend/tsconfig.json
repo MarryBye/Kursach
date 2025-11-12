@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "module": "es6",
+    "module": "nodenext",
     "target": "es6",
     "types": [],
 
     "rootDir": "./src/scripts/",
     "outDir": "../src/static/scripts/",
+
+    "moduleResolution": "nodenext",
 
     "sourceMap": true,
     "declaration": true,
